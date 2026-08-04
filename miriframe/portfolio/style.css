@@ -1319,8 +1319,7 @@ footer:after {
         height: 100svh;
         padding-top: 80px;
         padding-bottom: 40px;
-        justify-content: flex-end;
-        padding-bottom: 60px;
+        justify-content: center;
     }
     .home .home-content {
         max-width: 100%;
