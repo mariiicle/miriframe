@@ -120,7 +120,7 @@ section .title::after{
 }
 
 /* Title color override for dark-bg sections */
-.services .title, .teams .title {
+.services .title, .teams .title, .contact .title {
     color: #ffffff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 }
@@ -452,7 +452,11 @@ section .title::after{
 
 /* about section */
 .about{
-    background: var(--cream);
+    background: var(--surface);
+    background-image:
+        linear-gradient(90deg, rgba(12, 36, 97, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(12, 36, 97, 0.05) 1px, transparent 1px);
+    background-size: 16px 16px;
 }
 .about .title::after{
     content: "The Story So Far";
@@ -758,11 +762,11 @@ section .title::after{
     background-size: 16px 16px;
 }
 .contact{
-    color: var(--ink);
-    background-color: var(--cream);
+    color: #fff;
+    background-color: var(--pixel-blue-dark);
     background-image:
-        linear-gradient(90deg, rgba(12, 36, 97, 0.05) 1px, transparent 1px),
-        linear-gradient(rgba(12, 36, 97, 0.05) 1px, transparent 1px);
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px);
     background-size: 16px 16px;
 }
 .services .title::before,
@@ -914,9 +918,7 @@ section .title::after{
     background: #4A8FCC !important;
 }
 
-/* services ends on its dark background; contact now switches to the light
-   cream background (matching About), so the color break itself separates
-   them without needing a big padding gap */
+/* services and contact both use the dark theme background now */
 .services{
     padding-bottom: 40px;
 }
