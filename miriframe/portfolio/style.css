@@ -132,6 +132,9 @@ section .title::after{
 .services .title::after{
     content: "My Magic Touch";
 }
+.reviews .title::after{
+    content: "What They're Saying";
+}
 .teams .title::after{
     content: "My Creative Circle";
 }
@@ -458,6 +461,85 @@ section .title::after{
     padding: 4px 12px;
     border: 2px solid var(--pixel-blue-dark);
     box-shadow: 3px 3px 0 var(--pixel-blue-dark);
+}
+
+/* reviews section */
+.reviews{
+    background: var(--surface);
+    background-image:
+        linear-gradient(90deg, rgba(12, 36, 97, 0.05) 1px, transparent 1px),
+        linear-gradient(rgba(12, 36, 97, 0.05) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+.reviews .title::after{
+    content: "What They're Saying";
+    background: var(--pixel-yellow);
+    color: var(--pixel-blue-dark);
+    padding: 4px 12px;
+    border: 2px solid var(--pixel-blue-dark);
+    box-shadow: 3px 3px 0 var(--pixel-blue-dark);
+}
+.reviews .reviews-empty{
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--cream);
+    border: 3px dashed var(--pixel-blue);
+    padding: 56px 32px;
+    box-shadow: var(--shadow-sm);
+}
+.reviews .cricket-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+.reviews .cricket-row i{
+    font-size: 26px;
+    color: var(--accent-teal);
+    animation: cricket-hop 1.6s ease-in-out infinite;
+}
+.reviews .cricket-row i:last-child{
+    animation-delay: 0.3s;
+}
+@keyframes cricket-hop{
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(-8deg); }
+}
+.reviews .cricket-sound{
+    font-family: var(--font-body);
+    font-size: 20px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+}
+.reviews .empty-heading{
+    font-family: var(--font-pixel);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink);
+    text-shadow: 2px 2px 0 var(--pixel-yellow);
+    margin-bottom: 16px;
+}
+.reviews .empty-text{
+    font-family: var(--font-body);
+    font-size: 22px;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+}
+.reviews .see-btn{
+    display: inline-block;
+}
+@media (max-width: 500px){
+    .reviews .reviews-empty{
+        padding: 40px 20px;
+    }
+    .reviews .empty-heading{
+        font-size: 14px;
+    }
+    .reviews .empty-text{
+        font-size: 18px;
+    }
 }
 .about .about-content .left{
     width: 45%;
