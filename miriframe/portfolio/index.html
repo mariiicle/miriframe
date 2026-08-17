@@ -2,458 +2,303 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miriframe | Project Showcase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Miriframe | Freelance Graphic Design</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
-    <!-- Three.js for 3D GLB rendering (requires localhost/http) -->
-    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
-    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="https://unpkg.com/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
-    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 </head>
 <body>
-
-    <div class="scroll-up-btn" id="scrollUpBtn">
+    <div class="scroll-up-btn">
         <i class="fas fa-angle-up"></i>
     </div>
-
-    <!-- Navbar -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="index.html">Miri<span>frame</span></a></div>
-            <ul class="menu" id="navMenu">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#reviews">Reviews</a></li>
-                <li><a href="portfolio.html" class="active-link">Project Showcase</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+            <div class="logo"><a href="#">Miri<span>frame</span></a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">Home</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#reviews" class="menu-btn">Reviews</a></li>
+                <li><a href="portfolio.html" class="menu-btn">Project Showcase</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
-            <div class="menu-btn" id="menuToggle">
+            <div class="menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="portfolio-hero is-in-view">
+    <!-- home section start -->
+    <section class="home" id="home">
         <div class="max-width">
-            <div class="inner">
-                <h1>Project Showcase</h1>
-                <p>Brand videos, hypothetical campaigns, templates, and game concepts — click a video card to watch on Facebook.</p>
-                <a href="index.html" class="hero-back-btn">
-                    <i class="fas fa-arrow-left"></i> Back to Home
+            <div class="home-content">
+                <div class="text-1">Welcome to</div>
+                <div class="text-2">Miriframe</div>
+                <div class="text-3">Frame for creativity<br><span class="typing"></span></div>
+                <a href="#contact">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title reveal">About Miriframe</h2>
+            <div class="about-content">
+                <div class="column left reveal-left">
+                    <img src="images/2.jpg" alt="">
+                </div>
+                <div class="column right reveal-right">
+                    <p><strong>Miriframe</strong> is a startup freelance graphic design brand founded by <strong>Marithes Miraflor</strong>, launched in <strong>May 2026</strong>. It's a young, growing space where design ideas take shape into real visual work.</p>
+                    <p>Right now, Miriframe is still in its early chapter — they're building up a portfolio of <strong>hypothetical projects</strong> designed to showcase their range and skills in graphic design, from branding concepts to digital layouts, before taking on bigger client work.</p>
+                    <p>Even so, <strong>Miriframe is currently open for commissions</strong>! Whether you need a logo, poster, social media content, or any custom design, feel free to reach out through the contact section below.</p>
+                    <p>Loved working with Miriframe, or just want to support this new brand? 🌟 Don't forget to <strong>leave a review</strong> — every bit of feedback helps Miriframe grow!</p>
+                    <a href="portfolio.html">
+                        <button class="see-btn">View Project Showcase</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title reveal">Services</h2>
+            <div class="serv-content reveal-stagger">
+                <div class="card reveal-scale">
+                    <div class="box">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="text">Graphic Design</div>
+                        <p>Transform your ideas into compelling visual experiences. From brand identity to marketing materials, I create designs that effectively communicate your message and engage your audience.</p>
+                    </div>
+                </div>
+                <div class="card reveal-scale">
+                    <div class="box">
+                        <i class="fas fa-film"></i>
+                        <div class="text">Video Editing & Ads</div>
+                        <p>Eye-catching video edits built for promos and ads. From cuts and pacing to captions and effects, I craft video content that grabs attention and drives engagement.</p>
+                    </div>
+                </div>
+                <div class="card reveal-scale">
+                    <div class="box">
+                        <i class="fas fa-hashtag"></i>
+                        <div class="text">Social Media Branding</div>
+                        <p>Cohesive, scroll-stopping content for your socials. From templates to post layouts, I help your brand look consistent and stand out across every platform.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- reviews section start -->
+    <section class="reviews" id="reviews">
+        <div class="max-width">
+            <h2 class="title reveal">Client Reviews</h2>
+            <div class="reviews-empty reveal-scale">
+                <div class="cricket-row">
+                    <i class="fas fa-bug"></i>
+                    <span class="cricket-sound">*cricket sounds*</span>
+                    <i class="fas fa-bug"></i>
+                </div>
+                <div class="empty-heading">Nothing to see here... yet!</div>
+                <p class="empty-text">Work with Miriframe to make some noise here — chuchuchuchu! 🎶</p>
+                <a href="#contact">
+                    <button class="see-btn">Be the First to Leave a Review</button>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Filter Bar -->
-    <div class="filter-bar">
+    <!-- contact section -->
+    <section class="contact" id="contact">
         <div class="max-width">
-            <div class="filter-group">
-                <button class="filter-btn active" data-filter="all">All Work</button>
-                <button class="filter-btn" data-filter="video">Video</button>
-                <button class="filter-btn" data-filter="hypothetical">Hypothetical Projects</button>
-                <button class="filter-btn" data-filter="templates">Templates</button>
-                <button class="filter-btn" data-filter="game">Game Concept</button>
-                <button class="filter-btn" data-filter="palette">Palette Play</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Grid -->
-    <section class="portfolio-grid">
-        <div class="max-width">
-            <div class="grid-wrapper" id="portfolioGrid">
-
-                <!-- Video — Moss and Mortar -->
-                <div class="port-card video-card" data-category="video">
-                    <a href="https://www.facebook.com/share/v/17Z6FXuHYN/" target="_blank" rel="noopener noreferrer" class="video-card-link">
-                        <div class="card-thumb video-thumb video-thumb--moss">
-                            <img src="images/portfolio/moss-mortar.png" alt="Moss and Mortar video thumbnail" onerror="this.style.display='none'">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <span class="video-fb-badge"><i class="fab fa-facebook-f"></i> FB</span>
-                            <span class="card-category-badge">Video</span>
-                            <span class="video-thumb-label">MOSS &amp; MORTAR</span>
+            <h2 class="title reveal">Contact</h2>
+            <div class="contact-content">
+                <div class="column left reveal-left">
+                    <div class="contact-panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Contact Miriframe</h3>
+                            <p class="panel-desc">Open for commissions! Reach out to discuss your design project or request a custom piece.</p>
                         </div>
-                        <div class="card-body">
-                            <h3>Moss and Mortar</h3>
-                            <p>Brand video edit showcasing Moss and Mortar — crafted visuals, pacing, and storytelling for social media.</p>
-                            <div class="card-tags">
-                                <span class="tag">Video Editing</span>
-                                <span class="tag">Branding</span>
-                                <span class="tag">Facebook</span>
+                        <div class="contact-list">
+                            <div class="row">
+                                <i class="fas fa-palette"></i>
+                                <div class="info">
+                                    <div class="head">Brand</div>
+                                    <div class="sub-title">Miriframe</div>
+                                </div>
                             </div>
-                            <span class="video-watch-hint"><i class="fas fa-external-link-alt"></i> Watch on Facebook</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Video — Oasis Wear -->
-                <div class="port-card video-card" data-category="video">
-                    <a href="https://www.facebook.com/share/r/18zZNVWZNG/" target="_blank" rel="noopener noreferrer" class="video-card-link">
-                        <div class="card-thumb video-thumb video-thumb--oasis">
-                            <img src="images/portfolio/oasis-wear.png" alt="Oasis Wear video thumbnail" onerror="this.style.display='none'">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <span class="video-fb-badge"><i class="fab fa-facebook-f"></i> FB</span>
-                            <span class="card-category-badge">Video</span>
-                            <span class="video-thumb-label">OASIS WEAR</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Oasis Wear</h3>
-                            <p>Fashion-forward video content for Oasis Wear — dynamic cuts and visual rhythm built for engagement.</p>
-                            <div class="card-tags">
-                                <span class="tag">Video Editing</span>
-                                <span class="tag">Fashion</span>
-                                <span class="tag">Facebook</span>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Based In</div>
+                                    <div class="sub-title">Silang, Cavite, 4118</div>
+                                </div>
                             </div>
-                            <span class="video-watch-hint"><i class="fas fa-external-link-alt"></i> Watch on Facebook</span>
+                            <a href="mailto:marimira.management@gmail.com" class="row contact-email-link">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">marimira.management@gmail.com</div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-
-                <!-- Video — Cacao & Co. -->
-                <div class="port-card video-card" data-category="video">
-                    <a href="https://www.facebook.com/share/v/17mp1QvLkJ/" target="_blank" rel="noopener noreferrer" class="video-card-link">
-                        <div class="card-thumb video-thumb video-thumb--cacao">
-                            <img src="images/portfolio/cacao-co.png" alt="Cacao and Co. video thumbnail" onerror="this.style.display='none'">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <span class="video-fb-badge"><i class="fab fa-facebook-f"></i> FB</span>
-                            <span class="card-category-badge">Video</span>
-                            <span class="video-thumb-label">CACAO &amp; CO.</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Cacao &amp; Co.</h3>
-                            <p>Warm, inviting video edit for Cacao &amp; Co. — highlighting product mood, texture, and brand atmosphere.</p>
-                            <div class="card-tags">
-                                <span class="tag">Video Editing</span>
-                                <span class="tag">Product</span>
-                                <span class="tag">Facebook</span>
-                            </div>
-                            <span class="video-watch-hint"><i class="fas fa-external-link-alt"></i> Watch on Facebook</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Hypothetical Projects -->
-                <div class="port-card" data-category="hypothetical">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/LUNARA.png" alt="Lunara Home Essentials">
-                        <span class="card-category-badge">Hypothetical Projects</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/LUNARA.png" data-lightbox-post="https://www.facebook.com/share/p/1JmHhE2XtV/" onclick="openLightbox('Lunara Home Essentials','A conceptual brand campaign for Lunara Home Essentials — featuring the Moonlight Focus Collection with warm, minimalist visuals and refined typography for curated home and workspace decor.', event)">
-                                <i class="fas fa-eye"></i>
+                        <div class="social-block">
+                            <h4 class="social-heading">Social Media</h4>
+                            <div class="social-links">
+                                <a href="https://www.facebook.com/miriframeofficial" target="_blank" rel="noopener noreferrer" class="row social-link">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <div class="info">
+                                        <div class="head">Facebook</div>
+                                        <div class="sub-title">@miriframeofficial</div>
+                                    </div>
+                                </a>
+                                <a href="https://x.com/miriframe" target="_blank" rel="noopener noreferrer" class="row social-link">
+                                    <i class="fas fa-times"></i>
+                                    <div class="info">
+                                        <div class="head">X (Twitter)</div>
+                                        <div class="sub-title">@miriframe</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.instagram.com/miriframe.psd/" target="_blank" rel="noopener noreferrer" class="row social-link">
+                                    <i class="fab fa-instagram"></i>
+                                    <div class="info">
+                                        <div class="head">Instagram</div>
+                                        <div class="sub-title">@miriframe.psd</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.threads.net/@miriframe.psd" target="_blank" rel="noopener noreferrer" class="row social-link">
+                                    <i class="fas fa-at"></i>
+                                    <div class="info">
+                                        <div class="head">Threads</div>
+                                        <div class="sub-title">@miriframe.psd</div>
+                                    </div>
+                                </a>
+                                <a href="https://www.tiktok.com/@miriframe" target="_blank" rel="noopener noreferrer" class="row social-link">
+                                    <i class="fab fa-tiktok"></i>
+                                    <div class="info">
+                                        <div class="head">TikTok</div>
+                                        <div class="sub-title">@miriframe</div>
+                                    </div>
+                                </a>
+                                <a href="https://marimira.gumroad.com/subscribe" target="_blank" rel="noopener noreferrer" class="row social-link">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <div class="info">
+                                        <div class="head">Gumroad</div>
+                                        <div class="sub-title">marimira.gumroad.com/subscribe</div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body">
-                        <h3>Lunara Home Essentials</h3>
-                        <p>A hypothetical home essentials brand concept built around calm, intentional living — showcasing the Moonlight Focus Collection through soft lighting, earthy tones, and elegant layout design.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Social Media</span>
-                            <span class="tag">Layout Design</span>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="port-card" data-category="hypothetical">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/VERDANT.png" alt="Verdant Brew">
-                        <span class="card-category-badge">Hypothetical Projects</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/VERDANT.png" data-lightbox-post="https://www.facebook.com/share/p/18jsdnegLu/" onclick="openLightbox('Verdant Brew','A bold social media campaign for Verdant Brew — a fictional coffee brand with dynamic product visuals, energetic typography, and a fresh morning wake-up aesthetic.', event)">
-                                <i class="fas fa-eye"></i>
+                <div class="column right reveal-right">
+                    <div class="inquiry-panel">
+                        <div class="panel-header">
+                            <h3 class="panel-title">Email Inquiry</h3>
+                            <p class="panel-desc">Fill out the form below and I'll get back to you as soon as possible.</p>
+                        </div>
+                    <form id="contactForm">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" id="from_name" name="from_name" placeholder="Name" required>
+                            </div>
+                            <div class="field email">
+                                <input type="email" id="from_email" name="from_email" placeholder="Email" required>
                             </div>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Verdant Brew</h3>
-                        <p>A hypothetical coffee brand identity and promotional post designed to feel lively and memorable — combining splash photography, rich greens, and punchy copy for a strong first-cup-of-the-day message.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Social Media</span>
-                            <span class="tag">Product Design</span>
+                        <div class="field">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
-                    </div>
-                </div>
-
-                <div class="port-card" data-category="hypothetical">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/HAVEN-HEARTH.jpg" alt="Haven & Hearth" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-house-user"></i><span>Haven &amp; Hearth</span></div>
-                        <span class="card-category-badge">Hypothetical Projects</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/HAVEN-HEARTH.jpg" data-lightbox-post="https://www.facebook.com/share/p/18rsD3WVUS/" onclick="openLightbox('Haven & Hearth','A conceptual home &amp; lifestyle brand campaign for Haven &amp; Hearth — cozy, welcoming visuals and warm typography built around the feeling of a well-loved home.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
+                        <div class="field textarea">
+                            <textarea cols="30" rows="10" id="message" name="message" placeholder="Message" required></textarea>
                         </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Haven & Hearth</h3>
-                        <p>A hypothetical home &amp; lifestyle brand concept centered on comfort and warmth — designed with cozy color palettes, homey textures, and inviting layout choices.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Social Media</span>
-                            <span class="tag">Layout Design</span>
+                        <div class="button-area">
+                            <button type="submit" id="sendBtn">Send Message</button>
                         </div>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
                     </div>
                 </div>
-
-                <div class="port-card" data-category="hypothetical">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/INKWELL-PRESS.jpg" alt="Inkwell Press" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-feather-alt"></i><span>Inkwell Press</span></div>
-                        <span class="card-category-badge">Hypothetical Projects</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/INKWELL-PRESS.jpg" data-lightbox-post="https://www.facebook.com/share/p/14pTnxdeCaC/" onclick="openLightbox('Inkwell Press','A conceptual stationery &amp; print brand campaign for Inkwell Press — refined typography, paper textures, and a classic editorial feel for a fictional publishing house.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Inkwell Press</h3>
-                        <p>A hypothetical stationery and print brand concept with an editorial, old-world charm — built around classic typography, paper textures, and thoughtful print layouts.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Print Design</span>
-                            <span class="tag">Typography</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Palette Play -->
-                <div class="port-card" data-category="palette">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/PALETTE-PLAY-VOL03.png" alt="Palette Play Vol. 03: Terracotta Sanctuary" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-palette"></i><span>Terracotta Sanctuary</span></div>
-                        <span class="card-category-badge">Palette Play</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/PALETTE-PLAY-VOL03.png" data-lightbox-post="https://www.facebook.com/share/p/1DX432oi4C/" onclick="openLightbox('Palette Play Vol. 03: Terracotta Sanctuary','Sage Garden + Terracotta Clay brought to real branding — a promotional social media poster built around this earthy, grounded color pairing.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Palette Play Vol. 03: Terracotta Sanctuary</h3>
-                        <p>Sage Garden + Terracotta Clay — applying this palette as a real promotional poster for social media, exploring how warm clay tones and muted greens read together in a branded layout.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Color Theory</span>
-                            <span class="tag">Social Media</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="port-card" data-category="palette">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/PALETTE-PLAY-VOL04.png" alt="Palette Play Vol. 04: Sweet Drizzle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-palette"></i><span>Sweet Drizzle</span></div>
-                        <span class="card-category-badge">Palette Play</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/PALETTE-PLAY-VOL04.png" data-lightbox-post="https://www.facebook.com/share/p/17sNhrAgDj/" onclick="openLightbox('Palette Play Vol. 04: Sweet Drizzle','Misty Lavender + Golden Honey brought to real branding — a promotional social media poster built around this soft, sweet color pairing.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Palette Play Vol. 04: Sweet Drizzle</h3>
-                        <p>Misty Lavender + Golden Honey — applying this palette as a real promotional poster for social media, pairing a soft dusty purple with a warm honeyed gold for an inviting, sweet feel.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Color Theory</span>
-                            <span class="tag">Social Media</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="port-card" data-category="palette">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/PALETTE-PLAY-VOL06.png" alt="Palette Play Vol. 06: Little Mint Pop" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-palette"></i><span>Little Mint Pop</span></div>
-                        <span class="card-category-badge">Palette Play</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/PALETTE-PLAY-VOL06.png" onclick="openLightbox('Palette Play Vol. 06: Little Mint Pop','Bubblegum Pink + Mint Cream — applying this palette as a real promotional poster for social media, pairing a playful candy pink with a cool, creamy mint for a fresh, fun feel.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Palette Play Vol. 06: Little Mint Pop</h3>
-                        <p>Bubblegum Pink + Mint Cream — applying this palette as a real promotional poster for social media, pairing a playful candy pink with a cool, creamy mint for a fresh, fun feel.</p>
-                        <div class="card-tags">
-                            <span class="tag">Branding</span>
-                            <span class="tag">Color Theory</span>
-                            <span class="tag">Social Media</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Templates -->
-                <div class="port-card" data-category="templates">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/GREEN-NATURE-TEMPLATE.jpg" alt="Green Nature Educational Free Presentation Template" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-leaf"></i><span>Presentation Template</span></div>
-                        <span class="card-category-badge">Templates</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/GREEN-NATURE-TEMPLATE.jpg" data-lightbox-post="https://www.facebook.com/share/p/1GD8DS1NjB/" onclick="openLightbox('Green Nature Educational Free Presentation Template','A free, nature-themed presentation template designed for educational use — clean layouts, earthy tones, and organic accents perfect for lessons and reports.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>Green Nature Educational Free Presentation Template</h3>
-                        <p>A free downloadable presentation template with a nature-inspired look — designed for teachers, students, and anyone needing a clean educational slide deck.</p>
-                        <div class="card-tags">
-                            <span class="tag">Canva</span>
-                            <span class="tag">Presentation</span>
-                            <span class="tag">Free Template</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="port-card" data-category="templates">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/PREPPY-BIRTHDAY-TEMPLATE.png" alt="Customizable Cute Preppy-Style Birthday Poster Template" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-birthday-cake"></i><span>Birthday Poster Template</span></div>
-                        <span class="card-category-badge">Templates</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/PREPPY-BIRTHDAY-TEMPLATE.png" data-lightbox-post="https://www.facebook.com/share/p/1EeD4Gc2Xb/" onclick="openLightbox('[Girls] Customizable Cute Preppy-Style Birthday Poster Template','A customizable birthday poster template in a cute preppy style — perfect for girls\' birthday celebrations, with editable text and playful preppy details.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>[Girls] Customizable Cute Preppy-Style Birthday Poster Template</h3>
-                        <p>A cute, preppy-style birthday poster template made to be fully customizable — easy to edit with your own name, age, and party details.</p>
-                        <div class="card-tags">
-                            <span class="tag">Canva</span>
-                            <span class="tag">Poster Design</span>
-                            <span class="tag">Customizable</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="port-card" data-category="templates">
-                    <div class="card-thumb">
-                        <img src="images/portfolio/PUNK-BIRTHDAY-TEMPLATE.png" alt="Customizable Cute Punk-Style Birthday Poster Template" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-                        <div class="placeholder" style="display:none"><i class="fas fa-birthday-cake"></i><span>Birthday Poster Template</span></div>
-                        <span class="card-category-badge">Templates</span>
-                        <div class="card-overlay">
-                            <div class="overlay-btn" data-lightbox-img="images/portfolio/PUNK-BIRTHDAY-TEMPLATE.png" data-lightbox-post="https://www.facebook.com/share/p/14pfLmi4r85/" onclick="openLightbox('[Boys] Customizable Cute Punk-Style Birthday Poster Template','A customizable birthday poster template in a cute punk style — perfect for boys\' birthday celebrations, with editable text and bold punk-inspired details.', event)">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <h3>[Boys] Customizable Cute Punk-Style Birthday Poster Template</h3>
-                        <p>A cute, punk-style birthday poster template made to be fully customizable — easy to edit with your own name, age, and party details.</p>
-                        <div class="card-tags">
-                            <span class="tag">Canva</span>
-                            <span class="tag">Poster Design</span>
-                            <span class="tag">Customizable</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Game Concept -->
-                <div class="port-card video-card" data-category="game">
-                    <a href="https://www.facebook.com/share/v/1DLFdfsvUN/" target="_blank" rel="noopener noreferrer" class="video-card-link">
-                        <div class="card-thumb video-thumb video-thumb--teatime">
-                            <img src="images/portfolio/tea-thyme.png" alt="Tea Thyme game concept video thumbnail" onerror="this.style.display='none'">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <span class="video-fb-badge"><i class="fab fa-facebook-f"></i> FB</span>
-                            <span class="card-category-badge">Game Concept</span>
-                            <span class="video-thumb-label">TEA THYME</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Tea Thyme</h3>
-                            <p>A cozy game concept video for Tea Thyme — showcasing mood, UI direction, and atmosphere for a relaxing tea-shop-themed game idea.</p>
-                            <div class="card-tags">
-                                <span class="tag">Game Concept</span>
-                                <span class="tag">UI Design</span>
-                                <span class="tag">Video</span>
-                            </div>
-                            <span class="video-watch-hint"><i class="fas fa-external-link-alt"></i> Watch on Facebook</span>
-                        </div>
-                    </a>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <div class="stats-bar">
-        <div class="max-width">
-            <div class="inner">
-                <div class="stat-item">
-                    <div class="num">10<span>+</span></div>
-                    <div class="label">Projects Completed</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num">3<span>+</span></div>
-                    <div class="label">Years of Practice</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num">5<span>+</span></div>
-                    <div class="label">Tools Mastered</div>
-                </div>
-                <div class="stat-item">
-                    <div class="num">100<span>%</span></div>
-                    <div class="label">Creative Passion</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CTA -->
-    <section class="cta-section">
-        <div class="max-width">
-            <h2>Like what you see?</h2>
-            <p>Let's work together and turn your ideas into something beautiful.</p>
-            <a href="index.html#contact" class="cta-btn">Get in Touch</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- footer section start -->
     <footer>
         <span>Created by Miriframe | <span class="far fa-copyright"></span> 2026 All rights reserved</span>
     </footer>
 
-    <!-- Lightbox -->
-    <div class="lightbox-overlay" id="lightbox">
-        <div class="lightbox-box">
-            <button class="lightbox-close" id="lightboxCloseBtn"><i class="fas fa-times"></i></button>
-            <!-- Image / icon view -->
-            <div class="lightbox-img-placeholder" id="lbPlaceholder">
-                <img id="lbImage" src="" alt="">
-                <i class="fas fa-image" id="lbFallbackIcon"></i>
-            </div>
-            <!-- 3D model view -->
-            <div id="lb3DContainer">
-                <canvas id="lbCanvas3D"></canvas>
-                <div id="lb3DError" aria-live="polite"></div>
-            </div>
-            <!-- Video view -->
-            <div id="lbVideoContainer">
-                <video id="lbVideo" controls playsinline preload="metadata"></video>
-            </div>
-            <div class="lightbox-body">
-                <h3 id="lbTitle">Project Title</h3>
-                <p id="lbDesc">Project description.</p>
-                <a href="#" id="lbPostLink" class="see-full-post-btn" target="_blank" rel="noopener noreferrer" hidden>
-                    See Full Post <i class="fas fa-external-link-alt"></i>
-                </a>
-            </div>
-        </div>
-    </div>
+    <script src="script.js"></script>
+    <script>
+        // ─── EMAILJS SETUP ───────────────────────────────────────────────
+        // Replace the three values below with your own from emailjs.com
+        const EJS_PUBLIC_KEY   = "yzt_KVYoNYKUM_I7b";      // Account → Public Key
+        const EJS_SERVICE_ID   = "service_eheuxsc";      // Email Services → Service ID
+        const EJS_TEMPLATE_ID  = "template_skp1ap8";     // Email Templates → Template ID
+        // ─────────────────────────────────────────────────────────────────
 
-    <script src="portfolio.js"></script>
+        emailjs.init({ publicKey: EJS_PUBLIC_KEY });
+
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const btn    = document.getElementById("sendBtn");
+            const status = document.getElementById("formStatus");
+
+            // Loading state
+            btn.disabled    = true;
+            btn.textContent = "Sending…";
+            status.className = "form-status";
+            status.textContent = "";
+
+            const params = {
+                from_name:  document.getElementById("from_name").value.trim(),
+                from_email: document.getElementById("from_email").value.trim(),
+                subject:    document.getElementById("subject").value.trim(),
+                message:    document.getElementById("message").value.trim(),
+            };
+
+            emailjs.send(EJS_SERVICE_ID, EJS_TEMPLATE_ID, params)
+                .then(() => {
+                    status.className   = "form-status success";
+                    status.textContent = "✓ Message sent! I'll get back to you soon.";
+                    document.getElementById("contactForm").reset();
+                })
+                .catch((err) => {
+                    console.error("EmailJS error:", err);
+                    status.className   = "form-status error";
+                    status.textContent = "✗ Something went wrong. Please try again or email me directly.";
+                })
+                .finally(() => {
+                    btn.disabled    = false;
+                    btn.textContent = "Send Message";
+                });
+        });
+    </script>
+    <script>
+        // ── Scroll Reveal ──────────────────────────────────────────────
+        (function () {
+            const selectors = '.reveal, .reveal-left, .reveal-right, .reveal-scale';
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -10% 0px' });
+
+            document.querySelectorAll(selectors).forEach(el => observer.observe(el));
+        })();
+    </script>
 </body>
 </html>
